@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-typescript/base"],
+  "plugins": ["jest", "eslint-plugin-import"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "linebreak-style": 0
+  }
+}
