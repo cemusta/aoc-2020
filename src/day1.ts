@@ -30,14 +30,13 @@ export const FindTrio = (numbers: number[], target: number):number[] => {
   return trio;
 };
 
-export const Day1 = () => {
+export const ExpenseReport = (find:Function) => {
   const numbers = fs.readFileSync('./inputs/day1.txt', 'utf8').split('\r\n').map((x) => Number(x));
 
-  const pair = FindPair(numbers, 2020);
-  console.log(`pair: ${pair} => ${pair.reduce((acc, cur) => acc * cur, 1)}`);
+  const foundNumbers:number[] = find(numbers, 2020);
 
-  const trio = FindTrio(numbers, 2020);
-  console.log(`trio: ${trio} => ${trio.reduce((acc, cur) => acc * cur, 1)}`);
+  return foundNumbers.reduce((acc, cur) => acc * cur, 1);
 };
 
-// Day1();
+// console.log(`Day 1, part 1: ${ExpenseReport(FindPair)}`);
+// console.log(`Day 1, part 1: ${ExpenseReport(FindTrio)}`);
