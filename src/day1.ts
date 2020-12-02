@@ -40,4 +40,4 @@ export const Day1 = () => {
   console.log(`trio: ${trio} => ${trio.reduce((acc, cur) => acc * cur, 1)}`);
 };
 
-Day1();
+// Day1();
