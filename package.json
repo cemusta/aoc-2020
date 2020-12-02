@@ -18,7 +18,7 @@
     "coverage": "cross-env SILENT_LOGS=true jest --collectCoverage",
     "dev": "nodemon ./src",
     "lint": "eslint .",
-    "start": "node ./src",
+    "start": "ts-node ./src/day1.ts",
     "test": "cross-env SILENT_LOGS=true jest --verbose",
     "test:changes": "cross-env SILENT_LOGS=true jest -o",
     "test:logs": "jest",
@@ -33,6 +33,7 @@
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
+    "@types/node": "^12.19.8",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "codecov": "^3.8.1",
     "cross-env": "^7.0.2",

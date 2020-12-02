@@ -9,6 +9,7 @@
     "node": true
   },
   "rules": {
-    "linebreak-style": 0
+    "linebreak-style": "off",
+    "no-console": "off"
   }
 }
