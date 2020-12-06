@@ -1,10 +1,6 @@
-// import * as fs from 'fs';
-// import { countPasswordsWithValidFields, countValidPasswords, parsePassports } from './day4';
+import { findHighest, findMyTicket } from './day5';
+import { getTickets } from './inputs';
 
-// const input = fs.readFileSync('./inputs/day4.txt', 'utf8');
-
-// const parsedPassports = parsePassports(input);
-// const fieldCheck = countPasswordsWithValidFields(parsedPassports);
-// console.log(fieldCheck);
-// const passCheck = countValidPasswords(parsedPassports);
-// console.log(passCheck);
+const tickets = getTickets();
+console.log(`Day 5, part 1: ${findHighest(tickets)}`);
+console.log(`Day 5, part 2: ${findMyTicket(tickets)}`);
