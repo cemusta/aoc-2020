@@ -18,7 +18,7 @@
     "coverage": "cross-env SILENT_LOGS=true jest --collectCoverage",
     "dev": "nodemon ./src",
     "lint": "eslint .",
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node ./src/day6.ts",
     "test": "cross-env SILENT_LOGS=true jest --verbose",
     "test:changes": "cross-env SILENT_LOGS=true jest -o",
     "test:logs": "jest",
