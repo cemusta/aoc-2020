@@ -1,5 +1,6 @@
 import { findHighest, findMyTicket, findSeat } from '../src/day5';
 import { getTickets } from '../src/inputs/input5';
+import { part1, part2 } from '../src/answers/answer5';
 
 describe('findSeat', () => {
   it('should return correct seat for binary inputs sample', () => {
@@ -14,13 +15,13 @@ describe('day 5 solution', () => {
   const tickets = getTickets();
   describe('findHighest', () => {
     it('should return highest seatid', () => {
-      expect(findHighest(tickets)).toBe(838);
+      expect(findHighest(tickets)).toBe(part1);
     });
   });
 
   describe('findHighest', () => {
     it('should return highest seatid', () => {
-      expect(findMyTicket(tickets)).toBe(714);
+      expect(findMyTicket(tickets)).toBe(part2);
     });
   });
 });

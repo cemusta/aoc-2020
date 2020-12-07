@@ -18,13 +18,13 @@ export const ParsePasswordLine = (line:string):PasswordPolicy => {
   };
 };
 
-export const validatePasswordMinMax = (policy:PasswordPolicy):boolean => {
+export const ValidatePasswordMinMax = (policy:PasswordPolicy):boolean => {
   const occurance = policy.password.split('').reduce((acc, cur) => (cur === policy.char ? acc + 1 : acc), 0);
 
   return occurance <= policy.max && occurance >= policy.min;
 };
 
-export const validatePasswordPositional = (policy:PasswordPolicy):boolean => {
+export const ValidatePasswordPositional = (policy:PasswordPolicy):boolean => {
   const chars = `_${policy.password}`.split('');
 
   return (chars[policy.max] === policy.char) !== (chars[policy.min] === policy.char);

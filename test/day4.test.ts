@@ -4,7 +4,10 @@ import {
   eyeColorValidator, hairColorValidator, heightValidator,
   parsePassports, passportIdValidator, validatePassport, yearValidator,
 } from '../src/day4';
-import { sampleInput, validSamples, invalidSamples } from '../src/inputs/input4';
+import {
+  input, sampleInput, validSamples, invalidSamples,
+} from '../src/inputs/input4';
+import { part1, part2 } from '../src/answers/answer4';
 
 describe('Day 4', () => {
   describe('parsePassports', () => {
@@ -76,6 +79,11 @@ describe('Day 4', () => {
       const validPassports = parsePassports(validSamples);
       expect(countPasswordsWithValidFields(validPassports)).toBe(4);
     });
+
+    it('should return correct value for real input', () => {
+      const realPassports = parsePassports(input);
+      expect(countPasswordsWithValidFields(realPassports)).toBe(part1);
+    });
   });
 
   describe('countValidPasswords', () => {
@@ -87,6 +95,11 @@ describe('Day 4', () => {
     it('should return correct value for invalid sample', () => {
       const invalidPassports = parsePassports(invalidSamples);
       expect(countValidPasswords(invalidPassports)).toBe(0);
+    });
+
+    it('should return correct value for real input', () => {
+      const realPassports = parsePassports(input);
+      expect(countValidPasswords(realPassports)).toBe(part2);
     });
   });
 });

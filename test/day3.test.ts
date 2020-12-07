@@ -1,5 +1,6 @@
 import { calculateAllSlopes, calculateTreeCollisions } from '../src/day3';
 import { input, sample } from '../src/inputs/input3';
+import { part1, part2 } from '../src/answers/answer3';
 
 describe('Day 3', () => {
   describe('calculateTreeCollisions', () => {
@@ -28,12 +29,12 @@ describe('Day 3', () => {
   describe('calculateAllSlopes', () => {
     it('should calculate product of all collision courses for sample input', () => {
       const collisions = calculateAllSlopes(sample);
-      expect(collisions).toBe(336);
+      expect(collisions).toBe(part1);
     });
 
     it('should calculate product of all collision courses for real input', () => {
       const collisions = calculateAllSlopes(input);
-      expect(collisions).toBe(5007658656);
+      expect(collisions).toBe(part2);
     });
   });
 });
