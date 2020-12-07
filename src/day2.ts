@@ -1,5 +1,3 @@
-import * as fs from 'fs';
-
 type PasswordPolicy = {
   min: number
   max: number
@@ -32,8 +30,8 @@ export const validatePasswordPositional = (policy:PasswordPolicy):boolean => {
   return (chars[policy.max] === policy.char) !== (chars[policy.min] === policy.char);
 };
 
-export const ValidateAllPasswords = (validate:Function):number => {
-  const passwordPolicies = fs.readFileSync('./inputs/day2.txt', 'utf8').split('\n').map((x) => ParsePasswordLine(x));
+export const ValidateAllPasswords = (input:string, validate:Function):number => {
+  const passwordPolicies = input.split('\n').map((x) => ParsePasswordLine(x));
 
   const validCount = passwordPolicies.reduce(
     (acc, cur) => (validate(cur) ? acc + 1 : acc), 0,
@@ -41,6 +39,3 @@ export const ValidateAllPasswords = (validate:Function):number => {
 
   return validCount;
 };
-
-// console.log(`Day 2, part 1: ${ValidateAllPasswords(validatePasswordMinMax)}`);
-// console.log(`Day 2, part 2: ${ValidateAllPasswords(validatePasswordPositional)}`);

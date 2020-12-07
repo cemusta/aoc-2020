@@ -1,4 +1,4 @@
-adgvrhblps
+export const input = `adgvrhblps
 pghsdrbmalv
 hrlbpdasgv
 bgvsdplahr
@@ -2164,4 +2164,20 @@ rhmzalcsoq
 lgxcrmnqovd
 
 wdfkpmalijbncuvr
-qhnmikpzaygxwsovej
+qhnmikpzaygxwsovej`;
+
+export const sample1 = `abc
+
+a
+b
+c
+
+ab
+ac
+
+a
+a
+a
+a
+
+b`;

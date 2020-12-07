@@ -1,27 +1,9 @@
 import { checkAnswers } from '../src/day6';
-import { getDay6Input } from '../src/inputs';
-
-const sampleInput = `abc
-
-a
-b
-c
-
-ab
-ac
-
-a
-a
-a
-a
-
-b`;
-
-const questionInput = getDay6Input();
+import { sample1, input } from '../src/inputs/input6';
 
 describe('findSeat', () => {
   it('should return correct seat for binary inputs sample', () => {
-    expect(checkAnswers(sampleInput)).toBe(11);
-    expect(checkAnswers(questionInput)).toBe(6549);
+    expect(checkAnswers(sample1)).toBe(11);
+    expect(checkAnswers(input)).toBe(6549);
   });
 });

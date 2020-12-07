@@ -1,6 +1,4 @@
-import { findHighest, findMyTicket } from './day5';
-import { getTickets } from './inputs';
+import { checkAnswers } from './day6';
+import { input } from './inputs/input6';
 
-const tickets = getTickets();
-console.log(`Day 5, part 1: ${findHighest(tickets)}`);
-console.log(`Day 5, part 2: ${findMyTicket(tickets)}`);
+console.log(checkAnswers(input));

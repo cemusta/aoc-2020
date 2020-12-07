@@ -1,4 +1,5 @@
 import { ExpenseReport, FindPair, FindTrio } from '../src/day1';
+import { input } from '../src/inputs/input1';
 
 describe('Day 1', () => {
   describe('FindPair', () => {
@@ -23,12 +24,12 @@ describe('Day 1', () => {
 
   describe('ExpenseReport', () => {
     it('should found correct value for day1 input for pairs (part 1)', () => {
-      const count = ExpenseReport(FindPair);
+      const count = ExpenseReport(input, FindPair);
       expect(count).toBe(913824);
     });
 
     it('should found correct value for day1 input for trios (part 2)', () => {
-      const count = ExpenseReport(FindTrio);
+      const count = ExpenseReport(input, FindTrio);
       expect(count).toBe(240889536);
     });
   });

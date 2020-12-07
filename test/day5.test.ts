@@ -1,5 +1,5 @@
 import { findHighest, findMyTicket, findSeat } from '../src/day5';
-import { getTickets } from '../src/inputs';
+import { getTickets } from '../src/inputs/input5';
 
 describe('findSeat', () => {
   it('should return correct seat for binary inputs sample', () => {

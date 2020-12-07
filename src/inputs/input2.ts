@@ -1,4 +1,4 @@
-6-10 s: snkscgszxsssscss
+export const input = `6-10 s: snkscgszxsssscss
 6-7 b: bbbbbxkb
 2-4 n: nnnjn
 1-2 j: jjjj
@@ -997,4 +997,4 @@
 1-4 w: wjgw
 1-3 h: zhzzt
 2-11 j: sjjrtjkjhjj
-6-7 m: mlmrrmm
+6-7 m: mlmrrmm`;

@@ -1,8 +1,3 @@
-// import * as fs from 'fs';
-
-// const slopeArray = fs.readFileSync('./inputs/day3.txt', 'utf8').split('\r\n');
-// console.log(`Day 3, part 2: ${calculateAllSlopes(slopeArray)}`);
-
 export const calculateTreeCollisions = (slopes:string[], right:number, down:number):number => {
   const slopeLength = slopes[0].length;
 
