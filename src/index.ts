@@ -1,7 +1,10 @@
-import { checkAnswers, checkMatchingAnswers } from './day6';
-import { input, sample1 } from './inputs/input6';
+import { fixSequence, parseInput } from './day8';
+import { input } from './inputs/input8';
 
-console.log(checkAnswers(sample1));
-console.log(checkAnswers(input));
-console.log(checkMatchingAnswers(sample1));
-console.log(checkMatchingAnswers(input));
+// const args = parseInput(sample1);
+// const acc = bootSequence(args);
+// console.log(acc);
+
+const args = parseInput(input);
+const acc = fixSequence(args);
+console.log(acc);
