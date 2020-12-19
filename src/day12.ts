@@ -1,7 +1,3 @@
-import { input, sample1 } from './inputs/input12';
-
-export { input, sample1 };
-
 const Sides = ['N', 'E', 'S', 'W'];
 
 export class Navigation {
@@ -16,11 +12,11 @@ export class Navigation {
   wayNS: number;
 
   constructor(nav?: Navigation) {
-    this.facing = nav?.facing || 'E';
-    this.EW = nav?.EW || 0;
-    this.NS = nav?.NS || 0;
-    this.wayEW = nav?.wayEW || 10;
-    this.wayNS = nav?.wayNS || 1;
+    this.facing = nav?.facing ?? 'E';
+    this.EW = nav?.EW ?? 0;
+    this.NS = nav?.NS ?? 0;
+    this.wayEW = nav?.wayEW ?? 10;
+    this.wayNS = nav?.wayNS ?? 1;
   }
 }
 
@@ -151,8 +147,8 @@ export const calculateFinalDistance = (inputs: string[], navFunction: NavFunctio
   for (const inputLine of inputs) {
     const code = inputLine[0];
     const num = Number(inputLine.slice(1));
-    // console.log(code, num);
 
+    // console.log(code, num);
     nav = navFunction[code](num, nav);
     // console.log('update', nav);
   }
@@ -160,47 +156,3 @@ export const calculateFinalDistance = (inputs: string[], navFunction: NavFunctio
   // console.log(nav, Math.abs(nav.EW) + Math.abs(nav.NS));
   return Math.abs(nav.EW) + Math.abs(nav.NS);
 };
-
-// calculateFinalDistance(sample1, WaypointMap);
-// calculateFinalDistance(input, WaypointMap);
-
-// let navi = new Navigation();
-// navi.wayEW = 2;
-// navi.wayNS = 3;
-// console.log(navi);
-
-// console.log('-- 4xR90');
-
-// navi = WaypointMap.R(90, navi);
-// console.log(navi);
-// navi = WaypointMap.R(90, navi);
-// console.log(navi);
-// navi = WaypointMap.R(90, navi);
-// console.log(navi);
-// navi = WaypointMap.R(90, navi);
-// console.log(navi);
-
-// console.log('-- 2xR180');
-
-// navi = WaypointMap.R(180, navi);
-// console.log(navi);
-// navi = WaypointMap.R(180, navi);
-// console.log(navi);
-
-// console.log('-- 4xL90');
-
-// navi = WaypointMap.L(90, navi);
-// console.log(navi);
-// navi = WaypointMap.L(90, navi);
-// console.log(navi);
-// navi = WaypointMap.L(90, navi);
-// console.log(navi);
-// navi = WaypointMap.L(90, navi);
-// console.log(navi);
-
-// console.log('-- 2xL180');
-
-// navi = WaypointMap.L(180, navi);
-// console.log(navi);
-// navi = WaypointMap.L(180, navi);
-// console.log(navi);
