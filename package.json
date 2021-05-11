@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^15.0.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
     "codecov": "^3.8.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.26.0",
